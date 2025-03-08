@@ -57,14 +57,14 @@
         #binding-cells = <0>;
         bindings = <&kp MINUS>, <&kp EQUAL>;
 
-        tapping-term-ms = <75>;
+        tapping-term-ms = <150>;
     };
 
     slash_tap: slash_tap {
         compatible = "zmk,behavior-tap-dance";
         label = "SLASH_TAP";
         #binding-cells = <0>;
-        tapping-term-ms = <75>;
+        tapping-term-ms = <150>;
         bindings = <&kp SLASH>, <&kp PIPE>, <&kp BACKSLASH>;
     };
 
@@ -93,7 +93,7 @@
         #binding-cells = <0>;
         bindings = <&kp SEMICOLON>, <&kp COLON>;
 
-        tapping-term-ms = <75>;
+        tapping-term-ms = <150>;
     };
 
     macros {
