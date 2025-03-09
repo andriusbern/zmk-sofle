@@ -157,11 +157,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE     &kp F1           &kp F2        &kp F3            &kp F4             &kp F5         &mmv MOVE_UP     &kp F6          &kp F7                &kp F8                 &kp F9            &kp F10       &kp LS(LG(BACKSLASH))
-&trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH          &kp DOLLAR         &kp PERCENT    &mmv MOVE_DOWN   &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp CARET     &kp UNDER
-&lt 3 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3            &kp N4             &kp N5         &mmv MOVE_LEFT   &kp N6          &kp N7                &kp N8                 &kp N9            &kp N0        &kp DOUBLE_QUOTES
-&trans        &kp PLUS         &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL      &mmv MOVE_RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp LESS_THAN          &kp GREATER_THAN  &kp QUESTION  &trans
-&kp C_MUTE    &trans           &trans        &trans            &trans             &trans         &mkp LCLK        &trans          &trans                &trans                 &trans            &trans
+&kp GRAVE     &kp F1           &kp F2        &kp F3         &kp F4      &kp F5         &mmv MOVE_UP     &kp F6          &kp F7                &kp F8                 &kp F9            &kp F10            &kp LS(LG(BACKSLASH))
+&trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp DOLLAR  &kp PERCENT    &mmv MOVE_DOWN   &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER
+&lt 3 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3         &kp N4      &kp N5         &mmv MOVE_LEFT   &kp N6          &kp N7                &kp N8                 &kp N9            &kp N0             &kp DOUBLE_QUOTES
+&trans        &kp PLUS         &kp EQUAL     &kp AMPERSAND  &kp CARET   &kp EQUAL      &mmv MOVE_RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp LESS_THAN          &kp GREATER_THAN  &kp QUESTION       &trans
+&kp C_MUTE    &trans           &trans        &trans         &trans      &trans         &mkp LCLK        &trans          &trans                &trans                 &trans            &trans
             >;
 
             display-name = "layer1";
@@ -185,7 +185,7 @@
 &trans  &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2        &bt BT_SEL 3          &bt BT_SEL 4         &rgb_ug RGB_EFF  &trans           &trans                            &trans                             &trans                            &trans                           &trans
 &trans  &kp C_REWIND    &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &rgb_ug RGB_TOG       &ext_power EP_TOG    &trans           &rgb_ug RGB_HUI  &rgb_ug RGB_HUD                   &trans                             &trans                            &trans                           &trans
 &trans  &kp C_PREVIOUS  &kt C_VOLUME_DOWN  &kp C_NEXT          &kp C_BRIGHTNESS_INC  &out OUT_TOG         &trans           &rgb_ug RGB_SAI  &rgb_ug RGB_SAD                   &trans                             &trans                            &trans                           &trans
-&trans  &kp C_STOP      &kp C_MUTE         &kp C_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans           &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(169,88,31)  &rgb_ug RGB_COLOR_HSB(286,100,50)  &rgb_ug RGB_COLOR_HSB(237,44,39)  &rgb_ug RGB_COLOR_HSB(32,64,69)  &trans
+&trans  &kp C_STOP      &kp C_MUTE         &kp C_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans           &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(169,88,31)  &rgb_ug RGB_COLOR_HSB(286,100,50)  &rgb_ug RGB_COLOR_HSB(237,44,39)  &rgb_ug RGB_COLOR_HSB(32,64,69)  &rgb_ug RGB_COLOR_HSB(5,100,68)
 &tog 4  &trans          &trans             &trans              &trans                &trans               &trans           &trans           &trans                            &trans                             &trans                            &trans
             >;
 
