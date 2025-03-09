@@ -246,7 +246,7 @@ layers:
   - RGB COLOR HSB(286,100,50)
   - RGB COLOR HSB(237,44,39)
   - RGB COLOR HSB(32,64,69)
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(5,100,68)
   - {t: LAYER0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
