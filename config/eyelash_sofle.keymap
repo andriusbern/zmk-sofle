@@ -92,9 +92,9 @@
         compatible = "zmk,behavior-tap-dance";
         label = "COLON_SEMICOLON";
         #binding-cells = <0>;
-        bindings = <&kp SEMICOLON>, <&kp COLON>;
+        bindings = <&kp COLON>, <&kp SEMI>;
 
-        tapping-term-ms = <225>;
+        tapping-term-ms = <200>;
     };
 
     X_equal_tap: X_equal_tap {
@@ -110,7 +110,7 @@
         label = "Z_PLUS_TAP";
         #binding-cells = <0>;
         tapping-term-ms = <225>;
-        bindings = <&kp X>, <&kp PLUS>;
+        bindings = <&kp Z>, <&kp PLUS>;
     };
 
     macros {
