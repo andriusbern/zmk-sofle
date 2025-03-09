@@ -97,6 +97,22 @@
         tapping-term-ms = <225>;
     };
 
+    X_equal_tap: X_equal_tap {
+        compatible = "zmk,behavior-tap-dance";
+        label = "X_EQUAL_TAP";
+        #binding-cells = <0>;
+        tapping-term-ms = <225>;
+        bindings = <&kp X>, <&kp EQUAL>;
+    };
+
+    z_plus_tap: z_plus_tap {
+        compatible = "zmk,behavior-tap-dance";
+        label = "Z_PLUS_TAP";
+        #binding-cells = <0>;
+        tapping-term-ms = <225>;
+        bindings = <&kp X>, <&kp PLUS>;
+    };
+
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
@@ -128,11 +144,11 @@
 
         Mac {
             bindings = <
-&kp ESCAPE    &none      &none         &none             &none  &none        &mmv MOVE_UP     &none          &none    &none      &none                &none             &kp LG(P)
-&kp TAB       &kp Q      &kp W         &kp E             &kp R  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U    &kp I      &kp O                &kp P             &kp MINUS
-&lt 2 ESCAPE  &kp A      &kp S         &kp D             &kp F  &kp G        &mmv MOVE_LEFT   &kp H          &kp J    &kp K      &kp L                &colon_semicolon  &kp APOS
-&kp LSHFT     &kp Z      &kp X         &kp C             &kp V  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M    &kp COMMA  &kp DOT              &slash_tap        &kp RIGHT_SHIFT
-&mkp RCLK     &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 1  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp RET  &mo 1      &kp RG(RIGHT_SHIFT)  &kp DELETE
+&kp ESCAPE    &none        &none         &none             &none  &none        &mmv MOVE_UP     &none          &none    &none      &none                &none             &kp LG(P)
+&kp TAB       &kp Q        &kp W         &kp E             &kp R  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U    &kp I      &kp O                &kp P             &kp MINUS
+&lt 2 ESCAPE  &kp A        &kp S         &kp D             &kp F  &kp G        &mmv MOVE_LEFT   &kp H          &kp J    &kp K      &kp L                &colon_semicolon  &kp APOS
+&kp LSHFT     &z_plus_tap  &X_equal_tap  &kp C             &kp V  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M    &kp COMMA  &kp DOT              &slash_tap        &kp RIGHT_SHIFT
+&mkp RCLK     &kp LCTRL    &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 1  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp RET  &mo 1      &kp RG(RIGHT_SHIFT)  &kp DELETE
             >;
 
             sensor-bindings = <&faster_rotate>;
