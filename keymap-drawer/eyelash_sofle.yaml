@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_sofle}
 layers:
   LAYER0:
   - {t: '`', s: '~'}
@@ -230,9 +231,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB SAI
   - RGB SAD
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(77,74,62)
+  - RGB COLOR HSB(205,100,39)
+  - RGB COLOR HSB(147,99,44)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - STOP
