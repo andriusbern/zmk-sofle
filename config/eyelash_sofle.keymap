@@ -144,10 +144,10 @@
 
         Mac {
             bindings = <
-&kp ESCAPE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
+&kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
 &kp TAB       &kp Q         &kp W         &kp E             &kp R         &kp T           &mmv MOVE_DOWN   &kp Y          &kp U         &kp I            &kp O                &kp P             &kp UNDER
 &lt 2 ESCAPE  &kp A         &kp S         &kp D             &kp F         &kp G           &mmv MOVE_LEFT   &kp H          &kp J         &kp K            &kp L                &colon_semicolon  &kp APOS
-&kp LSHFT     &z_plus_tap   &X_equal_tap  &kp C             &kp V         &kp B           &mmv MOVE_RIGHT  &kp N          &kp M         &kp COMMA        &kp DOT              &kp SLASH         &kp RIGHT_SHIFT
+&kp LSHFT     &z_plus_tap   &X_equal_tap  &kp C             &kp V         &kp B           &mmv MOVE_RIGHT  &kp N          &kp M         &kp COMMA        &kp DOT              &kp SLASH         &kp MINUS
 &mkp RCLK     &kp LCTRL     &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 1         &kp SPACE       &mkp LCLK        &kp BACKSPACE  &kp ENTER     &kp RIGHT_SHIFT  &kp RG(RIGHT_SHIFT)  &kp DELETE
             >;
 
@@ -186,10 +186,20 @@
 &trans  &kp C_REWIND    &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &rgb_ug RGB_TOG       &ext_power EP_TOG    &trans           &rgb_ug RGB_HUI  &rgb_ug RGB_HUD                   &trans                             &trans                             &trans                            &trans
 &trans  &kp C_PREVIOUS  &kt C_VOLUME_DOWN  &kp C_NEXT          &kp C_BRIGHTNESS_INC  &out OUT_TOG         &trans           &rgb_ug RGB_SAI  &rgb_ug RGB_SAD                   &rgb_ug RGB_COLOR_HSB(77,74,62)    &rgb_ug RGB_COLOR_HSB(205,100,39)  &rgb_ug RGB_COLOR_HSB(147,99,44)  &trans
 &trans  &kp C_STOP      &kp C_MUTE         &kp C_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans           &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(169,88,31)  &rgb_ug RGB_COLOR_HSB(286,100,50)  &rgb_ug RGB_COLOR_HSB(237,44,39)   &rgb_ug RGB_COLOR_HSB(32,64,69)   &rgb_ug RGB_COLOR_HSB(5,100,68)
-&tog 4  &trans          &trans             &trans              &trans                &trans               &trans           &trans           &trans                            &trans                             &trans                             &trans
+&tog 5  &trans          &trans             &trans              &trans                &trans               &trans           &trans           &trans                            &trans                             &trans                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SLASH     &kp ASTERISK  &kp MINUS     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N7        &kp N8        &kp N9        &kp PLUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &kp N0        &trans
+            >;
         };
 
         Windows_linux {
@@ -197,9 +207,9 @@
             bindings = <
 &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp N4  &kp N5       &mmv MOVE_UP     &kp N6         &kp N7     &kp N8     &kp N9                 &kp N0      &kp BACKSLASH
 &kp TAB       &kp Q         &kp W         &kp E             &kp R   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U      &kp I      &kp O                  &kp P       &kp MINUS
-&lt 6 ESCAPE  &kp A         &kp S         &kp D             &kp F   &kp G        &mmv MOVE_LEFT   &kp H          &kp J      &kp K      &kp L                  &kp SEMI    &kp APOS
+&lt 7 ESCAPE  &kp A         &kp S         &kp D             &kp F   &kp G        &mmv MOVE_LEFT   &kp H          &kp J      &kp K      &kp L                  &kp SEMI    &kp APOS
 &kp LSHFT     &kp Z         &kp X         &kp C             &kp V   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M      &kp COMMA  &kp DOT                &kp FSLH    &kp RIGHT_SHIFT
-&mkp RCLK     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 5   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER  &mo 5      &kp RS(RIGHT_CONTROL)  &kp DELETE
+&mkp RCLK     &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &mo 6   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER  &mo 6      &kp RS(RIGHT_CONTROL)  &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder2>;
@@ -210,7 +220,7 @@
             bindings = <
 &kp GRAVE     &kp F1           &kp F2        &kp F3     &kp F4            &kp F5               &mmv MOVE_UP     &kp F6          &kp F7           &kp F8            &kp F9                &kp F10                &kp BACKSLASH
 &trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp DOLLAR        &kp PERCENT          &mmv MOVE_DOWN   &kp CARET       &kp AMPERSAND    &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS
-&lt 7 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3     &kp N4            &kp N5               &mmv MOVE_LEFT   &kp N6          &kp N7           &kp N8            &kp N9                &kp N0                 &kp EQUAL
+&lt 8 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3     &kp N4            &kp N5               &mmv MOVE_LEFT   &kp N6          &kp N7           &kp N8            &kp N9                &kp N0                 &kp EQUAL
 &trans        &kp PLUS         &kp TILDE     &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &mmv MOVE_RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SLASH              &trans
 &kp C_MUTE    &trans           &trans        &trans     &trans            &trans               &mkp LCLK        &trans          &trans           &trans            &trans                &trans
             >;
@@ -224,7 +234,7 @@
 &kp BACKSPACE  &kp HOME        &kp UP_ARROW    &kp END          &none            &kp K_LOCK    &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &kp UNDER    &kp F12
 &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN  &trans        &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBRC     &kp RBRC
 &trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &trans         &trans          &sys_reset      &soft_off        &bootloader  &trans
-&tog 0         &trans          &trans          &trans           &mo 7            &kp ENTER     &mkp LCLK        &kp DELETE     &trans          &trans          &trans           &trans
+&tog 0         &trans          &trans          &trans           &mo 8            &kp ENTER     &mkp LCLK        &kp DELETE     &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
