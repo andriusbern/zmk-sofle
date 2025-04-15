@@ -192,7 +192,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - AltGr+$$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   '3':
