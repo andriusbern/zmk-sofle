@@ -186,7 +186,6 @@
         NumLayer {
             bindings = <&none>;
             key-positions = <43 44>;
-            layers = <9>;
         };
 
         QWERTY-Toggle {
@@ -218,15 +217,17 @@
 
         colemak-dh {
             bindings = <
-&kp GRAVE     &kp N1     &kp N2    &kp N3    &kp N4  &kp N5       &trans  &kp N6    &kp N7   &kp N8     &kp N9         &kp N0    &kp BSLH
-&kp TAB       &kp Q      &kp W     &kp F     &kp P   &kp B        &trans  &kp J     &kp L    &kp U      &kp Y          &kp SEMI  &kp MINUS
-&lt 3 ESCAPE  &kp A      &kp R     &kp S     &kp T   &kp G        &trans  &kp M     &kp N    &kp E      &kp I          &kp O     &kp SQT
-&kp LSHFT     &kp Z      &kp X     &kp C     &kp D   &kp V        &trans  &kp K     &kp H    &kp COMMA  &kp DOT        &kp FSLH  &kp LS(UNDER)
-&kp MINUS     &kp LCTRL  &kp LALT  &kp LGUI  &mo 2   &kp SPACE    &trans  &kp BSPC  &kp RET  &kp RSHFT  &kp LG(RSHFT)  &kp DEL
+&kp GRAVE     &kp N1     &kp N2        &kp N3    &kp N4  &kp N5       &trans  &kp N6    &kp N7   &kp N8     &kp N9         &kp N0    &kp BSLH
+&kp TAB       &kp Q      &kp W         &kp F     &kp P   &kp B        &trans  &kp J     &kp L    &kp U      &kp Y          &kp SEMI  &kp MINUS
+&lt 3 ESCAPE  &kp A      &kp R         &kp S     &kp T   &kp G        &trans  &kp M     &kp N    &kp E      &kp I          &kp O     &kp SQT
+&kp LSHFT     &kp Z      &X_equal_tap  &kp C     &kp D   &kp V        &trans  &kp K     &kp H    &kp COMMA  &kp DOT        &kp FSLH  &kp LS(UNDER)
+&kp MINUS     &kp LCTRL  &kp LALT      &kp LGUI  &mo 2   &kp SPACE    &trans  &kp BSPC  &kp RET  &kp RSHFT  &kp LG(RSHFT)  &kp DEL
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_1 {
+        symbols {
             bindings = <
 &kp GRAVE     &kp F1           &kp F2        &kp F3         &kp F4      &kp F5         &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10          &kp BACKSLASH
 &trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp DOLLAR  &kp PERCENT    &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp MINUS
@@ -239,19 +240,19 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        layer_2 {
+        navigation {
             bindings = <
 &kp ESCAPE     &kp F1          &kp F2          &kp F3           &kp F4           &kp F5        &mmv MOVE_UP     &kp F6             &kp F7          &kp F8               &kp F9           &kp F10      &kp F11
 &kp BACKSPACE  &kp HOME        &kp UP_ARROW    &kp END          &none            &kp K_LOCK    &mmv MOVE_DOWN   &kp PAGE_UP        &kp HOME        &kp UP_ARROW         &kp END          &kp UNDER    &kp F12
 &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN  &trans        &mmv MOVE_LEFT   &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN_ARROW       &kp RIGHT_ARROW  &kp LBRC     &kp RBRC
-&trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &trans             &trans          &sys_reset           &soft_off        &bootloader  &trans
+&trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &tog 0             &tog 1          &sys_reset           &soft_off        &bootloader  &trans
 &trans         &trans          &trans          &trans           &mo 4            &kp ENTER     &mkp LCLK        &kp LA(BACKSPACE)  &trans          &kp RA(RIGHT_SHIFT)  &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
-        layer_3 {
+        sys-control {
             bindings = <
 &trans  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3     &bt BT_SEL 4         &rgb_ug RGB_EFF  &trans           &trans                            &trans                             &trans                             &trans                            &trans
 &trans  &kp C_REWIND    &mmv MOVE_UP    &kp C_FAST_FORWARD  &rgb_ug RGB_TOG  &ext_power EP_TOG    &trans           &rgb_ug RGB_HUI  &rgb_ug RGB_HUD                   &trans                             &trans                             &trans                            &trans
@@ -276,7 +277,7 @@
             sensor-bindings = <&scroll_encoder2>;
         };
 
-        layer_5 {
+        win-symbols {
             display-name = "layer1";
             bindings = <
 &kp GRAVE     &kp F1           &kp F2        &kp F3     &kp F4            &kp F5               &mmv MOVE_UP     &kp F6          &kp F7           &kp F8            &kp F9                &kp F10                &kp BACKSLASH
@@ -289,35 +290,25 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        layer_6 {
+        win-navigation {
             bindings = <
 &kp ESCAPE     &kp F1          &kp F2          &kp F3           &kp F4           &kp F5        &mmv MOVE_UP     &kp F6         &kp F7          &kp F8          &kp F9           &kp F10      &kp F11
 &kp BACKSPACE  &kp HOME        &kp UP_ARROW    &kp END          &none            &kp K_LOCK    &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &kp UNDER    &kp F12
 &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN  &trans        &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBRC     &kp RBRC
-&trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &trans         &trans          &sys_reset      &soft_off        &bootloader  &trans
+&trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &tog 0         &tog 1          &sys_reset      &soft_off        &bootloader  &trans
 &tog 0         &trans          &trans          &trans           &mo 8            &kp ENTER     &mkp LCLK        &kp DELETE     &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
-        layer_7 {
+        win-system {
             bindings = <
 &trans  &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2        &bt BT_SEL 3          &bt BT_SEL 4         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp C_REWIND    &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &rgb_ug RGB_TOG       &ext_power EP_TOG    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp K_PREVIOUS  &kt K_VOLUME_DOWN  &kp C_NEXT          &kp C_BRIGHTNESS_INC  &out OUT_TOG         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &kp C_MUTE         &kp K_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &tog 0  &trans          &trans             &trans              &trans                &tog 0               &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SLASH     &kp ASTERISK  &kp MINUS     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N7        &kp N8        &kp N9        &kp PLUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &kp N0        &trans
             >;
         };
     };
