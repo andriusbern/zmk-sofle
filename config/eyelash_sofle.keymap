@@ -181,6 +181,12 @@
             bindings = <&kp LG(LS(P))>;
             key-positions = <0 1>;
         };
+
+        NumLayer {
+            bindings = <&none>;
+            key-positions = <43 44>;
+            layers = <4>;
+        };
     };
 
     keymap {
@@ -290,7 +296,7 @@
 &trans  &kp C_REWIND    &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &rgb_ug RGB_TOG       &ext_power EP_TOG    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp K_PREVIOUS  &kt K_VOLUME_DOWN  &kp C_NEXT          &kp C_BRIGHTNESS_INC  &out OUT_TOG         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &kp C_MUTE         &kp K_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&tog 0  &trans          &trans             &trans              &trans                &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&tog 0  &trans          &trans             &trans              &trans                &tog 0               &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
