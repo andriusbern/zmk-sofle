@@ -186,31 +186,51 @@
         NumLayer {
             bindings = <&none>;
             key-positions = <43 44>;
-            layers = <4>;
+            layers = <9>;
+        };
+
+        QWERTY-Toggle {
+            bindings = <&tog 0>;
+            key-positions = <0 1 11 12>;
+        };
+
+        colemak-toggle {
+            bindings = <&tog 1>;
+            key-positions = <4 5 7 8>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Mac {
+        Mac-QWERTY {
             bindings = <
 &kp GRAVE     &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7        &kp NUMBER_8      &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
 &kp TAB       &kp Q            &kp W         &kp E             &kp R              &kp T           &mmv MOVE_DOWN   &kp Y          &kp U               &kp I             &kp O                &kp P             &kp MINUS
-&lt 2 ESCAPE  &HML LEFT_ALT A  &HML LCTRL S  &HML LEFT_GUI D   &HML LEFT_SHIFT F  &kp G           &mmv MOVE_LEFT   &kp H          &HMR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L     &colon_semicolon  &kp APOS
+&lt 3 ESCAPE  &HML LEFT_ALT A  &HML LCTRL S  &HML LEFT_GUI D   &HML LEFT_SHIFT F  &kp G           &mmv MOVE_LEFT   &kp H          &HMR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L     &colon_semicolon  &kp APOS
 &kp LSHFT     &kp Z            &X_equal_tap  &kp C             &kp V              &kp B           &mmv MOVE_RIGHT  &kp N          &kp M               &kp COMMA         &kp DOT              &kp SLASH         &kp UNDER
-&mkp RCLK     &kp LCTRL        &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 1              &kp SPACE       &mkp LCLK        &kp BACKSPACE  &kp ENTER           &kp RIGHT_SHIFT   &kp RG(RIGHT_SHIFT)  &kp DELETE
+&mkp RCLK     &kp LCTRL        &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2              &kp SPACE       &mkp LCLK        &kp BACKSPACE  &kp ENTER           &kp RIGHT_SHIFT   &kp RG(RIGHT_SHIFT)  &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder2>;
             display-name = "LAYER0";
         };
 
+        colemak-dh {
+            bindings = <
+&kp GRAVE     &kp N1     &kp N2    &kp N3    &kp N4  &kp N5       &trans  &kp N6    &kp N7   &kp N8     &kp N9         &kp N0    &kp BSLH
+&kp TAB       &kp Q      &kp W     &kp F     &kp P   &kp B        &trans  &kp J     &kp L    &kp U      &kp Y          &kp SEMI  &kp MINUS
+&lt 3 ESCAPE  &kp A      &kp R     &kp S     &kp T   &kp G        &trans  &kp M     &kp N    &kp E      &kp I          &kp O     &kp SQT
+&kp LSHFT     &kp Z      &kp X     &kp C     &kp D   &kp V        &trans  &kp K     &kp H    &kp COMMA  &kp DOT        &kp FSLH  &kp LS(UNDER)
+&kp MINUS     &kp LCTRL  &kp LALT  &kp LGUI  &mo 2   &kp SPACE    &trans  &kp BSPC  &kp RET  &kp RSHFT  &kp LG(RSHFT)  &kp DEL
+            >;
+        };
+
         layer_1 {
             bindings = <
 &kp GRAVE     &kp F1           &kp F2        &kp F3         &kp F4      &kp F5         &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10          &kp BACKSLASH
 &trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp DOLLAR  &kp PERCENT    &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp MINUS
-&lt 3 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3         &kp N4      &kp N5         &mmv MOVE_LEFT   &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &kp DOUBLE_QUOTES
+&lt 4 ESCAPE  &kp NUMBER_1     &kp NUMBER_2  &kp N3         &kp N4      &kp N5         &mmv MOVE_LEFT   &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &kp DOUBLE_QUOTES
 &trans        &kp PLUS         &kp EQUAL     &kp AMPERSAND  &kp CARET   &kp TILDE      &mmv MOVE_RIGHT  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QUESTION     &trans
 &kp C_MUTE    &trans           &trans        &trans         &trans      &trans         &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
             >;
@@ -225,7 +245,7 @@
 &kp BACKSPACE  &kp HOME        &kp UP_ARROW    &kp END          &none            &kp K_LOCK    &mmv MOVE_DOWN   &kp PAGE_UP        &kp HOME        &kp UP_ARROW         &kp END          &kp UNDER    &kp F12
 &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN  &trans        &mmv MOVE_LEFT   &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN_ARROW       &kp RIGHT_ARROW  &kp LBRC     &kp RBRC
 &trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &trans           &trans        &mmv MOVE_RIGHT  &trans             &trans          &sys_reset           &soft_off        &bootloader  &trans
-&trans         &trans          &trans          &trans           &mo 3            &kp ENTER     &mkp LCLK        &kp LA(BACKSPACE)  &trans          &kp RA(RIGHT_SHIFT)  &trans           &trans
+&trans         &trans          &trans          &trans           &mo 4            &kp ENTER     &mkp LCLK        &kp LA(BACKSPACE)  &trans          &kp RA(RIGHT_SHIFT)  &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
@@ -241,16 +261,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SLASH     &kp ASTERISK  &kp MINUS     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N7        &kp N8        &kp N9        &kp PLUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &kp N0        &trans
-            >;
         };
 
         Windows_linux {
@@ -298,6 +308,16 @@
 &trans  &kp K_PREVIOUS  &kt K_VOLUME_DOWN  &kp C_NEXT          &kp C_BRIGHTNESS_INC  &out OUT_TOG         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &kp C_MUTE         &kp K_PLAY_PAUSE    &kp C_BRIGHTNESS_DEC  &sys_reset           &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &tog 0  &trans          &trans             &trans              &trans                &tog 0               &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SLASH     &kp ASTERISK  &kp MINUS     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N7        &kp N8        &kp N9        &kp PLUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &kp N0        &trans
             >;
         };
     };
