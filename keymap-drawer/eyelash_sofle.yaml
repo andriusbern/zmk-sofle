@@ -211,7 +211,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - REWIND
-  - $$mdi:volume-high$$
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - FAST FORWARD
   - RGB TOG
   - EP TOG
@@ -223,10 +223,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - PREVIOUS
-  - {t: '$$mdi:volume-low$$', h: toggle}
-  - $$mdi:skip-next$$
-  - $$mdi:brightness-5$$
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '&mkp MB1'
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB SAI
@@ -239,7 +239,7 @@ layers:
   - STOP
   - $$mdi:volume-off$$
   - PLAY PAUSE
-  - $$mdi:brightness-7$$
+  - '&mkp MB2'
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
@@ -255,8 +255,8 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB1'
+  - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
