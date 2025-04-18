@@ -448,7 +448,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: LAYER0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -458,3 +458,6 @@ layers:
 combos:
 - p: [0, 1]
   k: Gui+Sft+P
+- p: [43, 44]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  l: ['8']
