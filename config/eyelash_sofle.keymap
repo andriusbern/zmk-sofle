@@ -204,11 +204,11 @@
 
         Mac-QWERTY {
             bindings = <
-&kp GRAVE     &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7        &kp NUMBER_8      &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
-&kp TAB       &kp Q            &kp W         &kp E             &kp R              &kp T           &mmv MOVE_DOWN   &kp Y          &kp U               &kp I             &kp O                &kp P             &kp MINUS
-&lt 3 ESCAPE  &HML LEFT_ALT A  &HML LCTRL S  &HML LEFT_GUI D   &HML LEFT_SHIFT F  &kp G           &mmv MOVE_LEFT   &kp H          &HMR RIGHT_SHIFT J  &HMR RIGHT_GUI K  &HMR RIGHT_ALT L     &colon_semicolon  &kp APOS
-&kp LSHFT     &kp Z            &X_equal_tap  &kp C             &kp V              &kp B           &mmv MOVE_RIGHT  &kp N          &kp M               &kp COMMA         &kp DOT              &kp SLASH         &kp UNDER
-&mkp RCLK     &kp LCTRL        &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2              &kp SPACE       &mkp LCLK        &kp BACKSPACE  &kp ENTER           &kp RIGHT_SHIFT   &kp RG(RIGHT_SHIFT)  &kp DELETE
+&kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
+&kp TAB       &kp Q         &kp W         &kp E             &kp R         &kp T           &mmv MOVE_DOWN   &kp Y          &kp U         &kp I            &kp O                &kp P             &kp MINUS
+&lt 3 ESCAPE  &kp A         &kp S         &kp D             &kp F         &kp G           &mmv MOVE_LEFT   &kp H          &kp J         &kp K            &kp L                &colon_semicolon  &kp APOS
+&kp LSHFT     &kp Z         &X_equal_tap  &kp C             &kp V         &kp B           &mmv MOVE_RIGHT  &kp N          &kp M         &kp COMMA        &kp DOT              &kp SLASH         &kp UNDER
+&mkp RCLK     &kp LCTRL     &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2         &kp SPACE       &mkp LCLK        &kp BACKSPACE  &kp ENTER     &kp RIGHT_SHIFT  &kp RG(RIGHT_SHIFT)  &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder2>;
