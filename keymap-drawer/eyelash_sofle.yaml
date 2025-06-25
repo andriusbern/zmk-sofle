@@ -121,7 +121,7 @@ layers:
   - {t: '-', s: _}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: LAYER0, h: toggle}
+  - LAYER0
   - layer1
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
