@@ -354,11 +354,11 @@
         COMMAND_LAYER_MAC {
             display-name = "LAYER0";
             bindings = <
-&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
-&kp LG(TAB)     &kp LG(Q)     &kp LG(W)     &kp LG(E)         &kp LG(R)     &kp LG(T)       &mmv MOVE_DOWN   &kp LG(Y)      &kp LG(U)     &kp LG(I)        &kp LG(O)            &kp LG(P)         &kp LG(MINUS)
-&kp LG(ESCAPE)  &kp LG(A)     &kp LG(S)     &kp LG(D)         &kp LG(F)     &kp LG(G)       &kp RIGHT        &kp LG(H)      &kp LG(J)     &kp LG(K)        &kp LG(L)            &colon_semicolon  &kp APOS
-&kp LSHFT       &kp LG(Z)     &kp LG(X)     &kp LG(C)         &kp LG(V)     &kp LG(B)       &mmv MOVE_RIGHT  &kp LG(N)      &kp LG(M)     &kp LG(COMMA)    &kp LG(DOT)          &kp SLASH         &kp UNDER
-&mkp RCLK       &kp LCTRL     &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2         &lt 3 SPACE     &mkp LCLK        &kp BACKSPACE  &kp ENTER     &kp RIGHT_SHIFT  &kp RG(RIGHT_SHIFT)  &kp DELETE
+&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5    &mmv MOVE_UP     &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8     &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
+&kp LG(TAB)     &kp LG(Q)     &kp LG(W)     &kp LG(E)         &kp LG(R)     &kp LG(T)       &mmv MOVE_DOWN   &kp LG(Y)          &kp LG(U)      &kp LG(I)        &kp LG(O)            &kp LG(P)         &kp LG(MINUS)
+&kp LG(ESCAPE)  &kp LG(A)     &kp LG(S)     &kp LG(D)         &kp LG(F)     &kp LG(G)       &kp RIGHT        &kp LG(H)          &kp LG(J)      &kp LG(K)        &kp LG(L)            &colon_semicolon  &kp APOS
+&kp LSHFT       &kp LG(Z)     &kp LG(X)     &kp LG(C)         &kp LG(V)     &kp LG(B)       &mmv MOVE_RIGHT  &kp LG(N)          &kp LG(M)      &kp LG(COMMA)    &kp LG(DOT)          &kp SLASH         &kp UNDER
+&mkp RCLK       &kp LCTRL     &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2         &lt 3 SPACE     &mkp LCLK        &kp LG(BACKSPACE)  &kp LG(ENTER)  &kp RIGHT_SHIFT  &kp RG(RIGHT_SHIFT)  &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder2>;
