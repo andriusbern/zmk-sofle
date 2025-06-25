@@ -60,8 +60,8 @@ layers:
   - layer1
   - {t: '$$mdi:keyboard-space$$', h: layer1}
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: 'Gui+$$mdi:backspace$$', type: backspace}
+  - {t: 'Gui+$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-shift$$
   - Gui+$$mdi:apple-keyboard-shift$$
   - $$mdi:backspace-reverse-outline$$
