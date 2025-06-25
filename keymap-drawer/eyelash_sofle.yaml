@@ -2,68 +2,68 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   LAYER0:
   - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: \, s: '|'}
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - Gui+$$mdi:keyboard-tab$$
+  - Gui+Q
+  - Gui+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: win-navigation}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
+  - Gui+Y
+  - Gui+U
+  - Gui+I
+  - Gui+O
+  - Gui+P
+  - {t: Gui+-, s: Gui+_}
+  - Gui+$$mdi:keyboard-esc$$
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - Gui+G
+  - $$mdi:arrow-right-bold$$
+  - Gui+H
+  - Gui+J
+  - Gui+K
+  - Gui+L
+  - '&colon_semicolon'
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
-  - X
-  - C
-  - V
-  - B
+  - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - Gui+B
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - Gui+N
+  - Gui+M
+  - {t: 'Gui+,', s: Gui+<}
+  - {t: Gui+., s: Gui+>}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - _
   - $$mdi:mouse-right-click-outline$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-control$$
   - layer1
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: layer1}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - layer1
-  - Sft+$$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - Gui+$$mdi:apple-keyboard-shift$$
   - $$mdi:backspace-reverse-outline$$
   colemak-dh:
   - {t: '`', s: '~'}
@@ -107,7 +107,7 @@ layers:
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
-  - '&X_equal_tap'
+  - X
   - C
   - D
   - V
@@ -117,11 +117,11 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - Sft+_
+  - _
   - {t: '-', s: _}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - LGUI
+  - {t: LAYER0, h: toggle}
   - layer1
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -129,7 +129,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-shift$$
   - Gui+$$mdi:apple-keyboard-shift$$
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   layer1:
   - {t: '`', s: '~'}
   - F1
@@ -188,7 +188,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -239,8 +239,8 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - PgUp
   - PgDn
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Gui+-, s: Gui+_}
+  - Gui++
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: LAYER0, h: toggle}
   - {t: colemak-dh, h: toggle}
@@ -276,7 +276,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - REWIND
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - $$mdi:volume-high$$
   - FAST FORWARD
   - RGB TOG
   - EP TOG
@@ -288,9 +288,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:skip-previous$$
+  - $$mdi:volume-low$$
+  - $$mdi:skip-next$$
   - '&mkp MB1'
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -318,7 +318,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB1'
   - $$mdi:mouse-right-click-outline$$
@@ -464,3 +464,5 @@ combos:
   k: {t: LAYER0, h: toggle}
 - p: [4, 5, 7, 8]
   k: {t: colemak-dh, h: toggle}
+- p: [42, 43, 44]
+  k: {t: layer1, h: toggle}
