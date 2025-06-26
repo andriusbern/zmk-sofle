@@ -99,12 +99,12 @@
         tapping-term-ms = <165>;
     };
 
-    z_equal_tap: z_equal_tap {
+    x_equal_tap: x_equal_tap {
         compatible = "zmk,behavior-tap-dance";
-        label = "Z_EQUAL_TAP";
+        label = "X_EQUAL_TAP";
         #binding-cells = <0>;
         tapping-term-ms = <225>;
-        bindings = <&kp Z>, <&kp EQUAL>;
+        bindings = <&kp X>, <&kp EQUAL>;
     };
 
     z_plus_tap: z_plus_tap {
@@ -170,6 +170,15 @@
         flavor = "tap-preferred";
     };
 
+    apo_quote_tap: apo_quote_tap {
+        compatible = "zmk,behavior-tap-dance";
+        label = "APO_QUOTE_TAP";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
+
+        tapping-term-ms = <225>;
+    };
+
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
@@ -223,6 +232,21 @@
             bindings = <&tog 3>;
             key-positions = <42 43 44>;
         };
+
+        semicolor_combo {
+            bindings = <&kp SEMI>;
+            key-positions = <48 49>;
+        };
+
+        escape_tap_l {
+            bindings = <&none>;
+            key-positions = <28 29 30>;
+        };
+
+        escape_tap_r {
+            bindings = <&none>;
+            key-positions = <34 35 36>;
+        };
     };
 
     keymap {
@@ -232,8 +256,8 @@
             bindings = <
 &kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                       &mmv MOVE_UP     &kp NUMBER_6                         &kp NUMBER_7                             &kp NUMBER_8  &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
 &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                              &mmv MOVE_DOWN   &kp Y                                &kp U                                    &kp I         &kp O                &kp P             &kp MINUS
-&lt 4 ESCAPE  &kp A         &kp S         &kp D         &kp F         &kp G                              &mmv MOVE_LEFT   &kp H                                &kp J                                    &kp K         &kp L                &colon_semicolon  &kp APOS
-&kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B                              &mmv MOVE_RIGHT  &kp N                                &kp M                                    &kp COMMA     &kp DOT              &kp SLASH         &kp UNDER
+&lt 4 ESCAPE  &kp A         &kp S         &kp D         &kp F         &kp G                              &mmv MOVE_LEFT   &kp H                                &kp J                                    &kp K         &kp L                &colon_semicolon  &apo_quote_tap
+&kp LSHFT     &kp Z         &x_equal_tap  &kp C         &kp V         &kp B                              &mmv MOVE_RIGHT  &kp N                                &kp M                                    &kp COMMA     &kp DOT              &kp SLASH         &kp UNDER
 &mkp RCLK     &kp LCTRL     &kp LEFT_ALT  &mo 10        &mo 2         &tap_preferred_layertap 3 SPACE    &mkp LCLK        &tap_preferred_layertap 3 BACKSPACE  &tap_preferred_modkey RIGHT_SHIFT ENTER  &bl BL_ON     &kp RG(RIGHT_SHIFT)  &tog 3
             >;
 
@@ -243,11 +267,11 @@
 
         colemak-dh {
             bindings = <
-&kp GRAVE     &kp N1     &kp N2    &kp N3  &kp N4  &kp N5                             &trans  &kp N6                               &kp N7                                   &kp N8     &kp N9         &kp N0    &kp BSLH
-&kp TAB       &kp Q      &kp W     &kp F   &kp P   &kp B                              &trans  &kp J                                &kp L                                    &kp U      &kp Y          &kp SEMI  &kp MINUS
-&lt 4 ESCAPE  &kp A      &kp R     &kp S   &kp T   &kp G                              &trans  &kp M                                &kp N                                    &kp E      &kp I          &kp O     &kp SQT
-&kp LSHFT     &kp Z      &kp X     &kp C   &kp D   &kp V                              &trans  &kp K                                &kp H                                    &kp COMMA  &kp DOT        &kp FSLH  &kp UNDERSCORE
-&kp MINUS     &kp LCTRL  &kp LALT  &mo 10  &mo 2   &tap_preferred_layertap 3 SPACE    &trans  &tap_preferred_layertap 3 BACKSPACE  &tap_preferred_modkey RIGHT_SHIFT ENTER  &kp RSHFT  &kp LG(RSHFT)  &trans
+&kp GRAVE     &kp N1     &kp N2        &kp N3  &kp N4  &kp N5                             &trans  &kp N6                               &kp N7                                   &kp N8     &kp N9         &kp N0    &kp BSLH
+&kp TAB       &kp Q      &kp W         &kp F   &kp P   &kp B                              &trans  &kp J                                &kp L                                    &kp U      &kp Y          &kp SEMI  &kp MINUS
+&lt 4 ESCAPE  &kp A      &kp R         &kp S   &kp T   &kp G                              &trans  &kp M                                &kp N                                    &kp E      &kp I          &kp O     &apo_quote_tap
+&kp LSHFT     &kp Z      &x_equal_tap  &kp C   &kp D   &kp V                              &trans  &kp K                                &kp H                                    &kp COMMA  &kp DOT        &kp FSLH  &kp UNDERSCORE
+&kp MINUS     &kp LCTRL  &kp LALT      &mo 10  &mo 2   &tap_preferred_layertap 3 SPACE    &trans  &tap_preferred_layertap 3 BACKSPACE  &tap_preferred_modkey RIGHT_SHIFT ENTER  &kp RSHFT  &kp LG(RSHFT)  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -255,11 +279,11 @@
 
         symbols {
             bindings = <
-&kp GRAVE     &kp F1     &kp F2       &kp F3         &kp F4         &kp F5          &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10    &kp BACKSLASH
-&trans        &kp GRAVE  &trans       &kp TILDE      &trans         &trans          &mmv MOVE_DOWN   &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans            &kp SEMI   &kp MINUS
-&lt 5 ESCAPE  &kp EXCL   &kp AT       &kp HASH       &kp DOLLAR     &kp PERCENT     &kp LS(DLLR)     &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp COLON  &kp DOUBLE_QUOTES
-&trans        &kp EQUAL  &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(MINUS)  &kp LG(PLUS)    &mmv MOVE_RIGHT  &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp SLASH  &kp UNDER
-&kp C_MUTE    &trans     &trans       &trans         &trans         &trans          &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
+&kp GRAVE     &kp F1      &kp F2          &kp F3        &kp F4             &kp F5             &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10       &kp BACKSLASH
+&kp TILDE     &kp EXCL    &kp HOME        &kp UP_ARROW  &kp END            &kp DOLLAR         &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE         &kp SEMI      &kp MINUS
+&lt 5 ESCAPE  &kp AT      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT          &kp HASH           &mmv MOVE_LEFT   &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp COLON     &kp DOUBLE_QUOTES
+&trans        &kp DELETE  &kp EQUAL       &kp PAGE_UP   &kp LG(PAGE_DOWN)  &kp LG(PERCENT)    &mmv MOVE_RIGHT  &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QUESTION  &kp UNDER
+&kp C_MUTE    &trans      &trans          &trans        &trans             &trans             &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
             >;
 
             display-name = "layer1";
