@@ -104,10 +104,10 @@ layers:
   - E
   - I
   - O
-  - {t: '''', s: '"'}
+  - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
   - Z
-  - X
+  - '&x_equal_tap'
   - C
   - D
   - V
@@ -466,3 +466,9 @@ combos:
   k: {t: colemak-dh, h: toggle}
 - p: [42, 43, 44]
   k: {t: layer1, h: toggle}
+- p: [48, 49]
+  k: {t: ;, s: ':'}
+- p: [28, 29, 30]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+- p: [34, 35, 36]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
