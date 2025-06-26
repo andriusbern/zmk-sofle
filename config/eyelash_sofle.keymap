@@ -279,11 +279,11 @@
 
         symbols {
             bindings = <
-&kp GRAVE     &kp F1      &kp F2          &kp F3        &kp F4             &kp F5             &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10       &kp BACKSLASH
-&kp TILDE     &kp EXCL    &kp HOME        &kp UP_ARROW  &kp END            &kp DOLLAR         &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE         &kp SEMI      &kp MINUS
-&lt 5 ESCAPE  &kp AT      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT          &kp HASH           &mmv MOVE_LEFT   &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp COLON     &kp DOUBLE_QUOTES
-&trans        &kp DELETE  &kp EQUAL       &kp PAGE_UP   &kp LG(PAGE_DOWN)  &kp LG(PERCENT)    &mmv MOVE_RIGHT  &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QUESTION  &kp UNDER
-&kp C_MUTE    &trans      &trans          &trans        &trans             &trans             &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
+&kp GRAVE     &kp F1      &kp F2          &kp F3        &kp F4         &kp F5         &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10       &kp BACKSLASH
+&kp TILDE     &kp EXCL    &kp HOME        &kp UP_ARROW  &kp END        &kp DOLLAR     &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE         &kp SEMI      &kp MINUS
+&lt 5 ESCAPE  &kp AT      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &kp HASH       &mmv MOVE_LEFT   &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp COLON     &kp DOUBLE_QUOTES
+&trans        &kp DELETE  &kp EQUAL       &kp PAGE_UP   &kp PAGE_DOWN  &kp PERCENT    &mmv MOVE_RIGHT  &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QUESTION  &kp UNDER
+&kp C_MUTE    &trans      &trans          &trans        &trans         &trans         &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
             >;
 
             display-name = "layer1";
