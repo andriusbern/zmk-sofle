@@ -239,12 +239,12 @@
         };
 
         escape_tap_l {
-            bindings = <&none>;
+            bindings = <&kp ESCAPE>;
             key-positions = <28 29 30>;
         };
 
         escape_tap_r {
-            bindings = <&none>;
+            bindings = <&kp ESCAPE>;
             key-positions = <34 35 36>;
         };
     };
