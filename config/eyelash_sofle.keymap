@@ -107,12 +107,12 @@
         bindings = <&kp X>, <&kp EQUAL>;
     };
 
-    z_plus_tap: z_plus_tap {
+    minus_plus_tap: minus_plus_tap {
         compatible = "zmk,behavior-tap-dance";
-        label = "Z_PLUS_TAP";
+        label = "MINUS_PLUS_TAP";
         #binding-cells = <0>;
         tapping-term-ms = <225>;
-        bindings = <&kp Z>, <&kp PLUS>;
+        bindings = <&kp MINUS>, <&kp PLUS>;
     };
 
     gravetap: gravetap {
@@ -255,7 +255,7 @@
         Mac-QWERTY {
             bindings = <
 &kp GRAVE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                       &mmv MOVE_UP     &kp NUMBER_6                         &kp NUMBER_7                             &kp NUMBER_8  &kp NUMBER_9         &kp NUMBER_0      &kp BACKSLASH
-&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                              &mmv MOVE_DOWN   &kp Y                                &kp U                                    &kp I         &kp O                &kp P             &kp MINUS
+&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                              &mmv MOVE_DOWN   &kp Y                                &kp U                                    &kp I         &kp O                &kp P             &minus_plus_tap
 &lt 4 ESCAPE  &kp A         &kp S         &kp D         &kp F         &kp G                              &mmv MOVE_LEFT   &kp H                                &kp J                                    &kp K         &kp L                &colon_semicolon  &apo_quote_tap
 &kp LSHFT     &kp Z         &x_equal_tap  &kp C         &kp V         &kp B                              &mmv MOVE_RIGHT  &kp N                                &kp M                                    &kp COMMA     &kp DOT              &kp SLASH         &kp UNDER
 &mkp RCLK     &kp LCTRL     &kp LEFT_ALT  &mo 10        &mo 2         &tap_preferred_layertap 3 SPACE    &mkp LCLK        &tap_preferred_layertap 3 BACKSPACE  &tap_preferred_modkey RIGHT_SHIFT ENTER  &bl BL_ON     &kp RG(RIGHT_SHIFT)  &tog 3
@@ -268,7 +268,7 @@
         colemak-dh {
             bindings = <
 &kp GRAVE     &kp N1     &kp N2        &kp N3  &kp N4  &kp N5                             &trans  &kp N6                               &kp N7                                   &kp N8     &kp N9         &kp N0    &kp BSLH
-&kp TAB       &kp Q      &kp W         &kp F   &kp P   &kp B                              &trans  &kp J                                &kp L                                    &kp U      &kp Y          &kp SEMI  &kp MINUS
+&kp TAB       &kp Q      &kp W         &kp F   &kp P   &kp B                              &trans  &kp J                                &kp L                                    &kp U      &kp Y          &kp SEMI  &minus_plus_tap
 &lt 4 ESCAPE  &kp A      &kp R         &kp S   &kp T   &kp G                              &trans  &kp M                                &kp N                                    &kp E      &kp I          &kp O     &apo_quote_tap
 &kp LSHFT     &kp Z      &x_equal_tap  &kp C   &kp D   &kp V                              &trans  &kp K                                &kp H                                    &kp COMMA  &kp DOT        &kp FSLH  &kp UNDERSCORE
 &kp MINUS     &kp LCTRL  &kp LALT      &mo 10  &mo 2   &tap_preferred_layertap 3 SPACE    &trans  &tap_preferred_layertap 3 BACKSPACE  &tap_preferred_modkey RIGHT_SHIFT ENTER  &kp RSHFT  &kp LG(RSHFT)  &trans
@@ -280,7 +280,7 @@
         symbols {
             bindings = <
 &kp GRAVE     &kp F1      &kp F2          &kp F3        &kp F4         &kp F5         &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10       &kp BACKSLASH
-&kp TILDE     &kp EXCL    &kp HOME        &kp UP_ARROW  &kp END        &kp DOLLAR     &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE         &kp SEMI      &kp MINUS
+&kp TILDE     &kp EXCL    &kp HOME        &kp UP_ARROW  &kp END        &kp DOLLAR     &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE         &kp SEMI      &minus_plus_tap
 &lt 5 ESCAPE  &kp AT      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &kp HASH       &mmv MOVE_LEFT   &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND     &kp COLON     &kp DOUBLE_QUOTES
 &trans        &kp DELETE  &kp EQUAL       &kp PAGE_UP   &kp PAGE_DOWN  &kp PERCENT    &mmv MOVE_RIGHT  &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QUESTION  &kp UNDER
 &kp C_MUTE    &trans      &trans          &trans        &trans         &trans         &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans            &trans
@@ -293,23 +293,23 @@
         Numerical {
             display-name = "layer1";
             bindings = <
-&kp GRAVE     &kp F1     &kp F2        &kp F3        &kp F4        &kp F5       &mmv MOVE_UP     &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &kp BACKSLASH
-&trans        &kp SLASH  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK    &mmv MOVE_DOWN   &kp ASTERISK   &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
-&lt 5 ESCAPE  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &mmv MOVE_LEFT   &kp DOT        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp DOUBLE_QUOTES
-&trans        &kp CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &mmv MOVE_RIGHT  &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans
-&kp C_MUTE    &kp PIPE   &kp NUMBER_0  &kp PERIOD    &kp SPACE     &trans       &mkp LCLK        &kp BACKSPACE  &kp SPACE     &kp SPACE     &trans        &trans
+&kp GRAVE     &kp F1     &kp F2        &kp F3        &kp F4        &kp F5       &mmv MOVE_UP     &kp F6         &kp F7                &kp F8                 &kp F9     &kp F10    &kp BACKSLASH
+&trans        &kp SLASH  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK    &mmv MOVE_DOWN   &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE  &kp SEMI   &minus_plus_tap
+&lt 5 ESCAPE  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &mmv MOVE_LEFT   &kp PERCENT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS   &kp COLON  &kp DOUBLE_QUOTES
+&trans        &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &mmv MOVE_RIGHT  &kp EQUAL      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COMMA  &kp DOT    &trans
+&kp C_MUTE    &kp COMMA  &kp NUMBER_0  &kp PERIOD    &kp SPACE     &trans       &mkp LCLK        &kp BACKSPACE  &kp SPACE             &kp SPACE              &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        navigation {
+        numrow {
             bindings = <
-&kp ESCAPE     &kp F1          &kp F2          &kp F3           &kp F4           &kp F5          &mmv MOVE_UP     &kp F6             &kp F7          &kp F8               &kp F9           &kp F10      &kp F11
-&kp BACKSPACE  &kp HOME        &kp UP_ARROW    &kp END          &none            &kp K_LOCK      &mmv MOVE_DOWN   &kp PAGE_UP        &kp HOME        &kp UP_ARROW         &kp END          &kp UNDER    &kp F12
-&trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN  &trans          &mmv MOVE_LEFT   &kp PAGE_DOWN      &kp LEFT_ARROW  &kp DOWN_ARROW       &kp RIGHT_ARROW  &kp LBRC     &kp RBRC
-&trans         &kp DELETE      &kp PAGE_UP     &kp PAGE_DOWN    &kp LG(MINUS)    &kp LG(PLUS)    &mmv MOVE_RIGHT  &tog 0             &tog 1          &sys_reset           &soft_off        &bootloader  &trans
-&trans         &trans          &trans          &trans           &mo 5            &kp ENTER       &mkp LCLK        &kp LA(BACKSPACE)  &trans          &kp RA(RIGHT_SHIFT)  &trans           &trans
+&kp ESCAPE     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5        &mmv MOVE_UP    &kp F6             &kp F7      &kp F8               &kp F9      &kp F10     &kp F11
+&kp BACKSPACE  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &mmv MOVE_DOWN  &kp LS(N6)         &kp LS(N7)  &kp LS(N8)           &kp LS(N9)  &kp LS(N0)  &kp F12
+&trans         &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &mmv MOVE_LEFT  &kp N6             &kp N7      &kp N8               &kp N9      &kp N0      &kp F12
+&trans         &kp F1      &kp F2      &kp F3      &kp F4      &kp F5        &kp F6          &kp F6             &kp F7      &kp F8               &kp F9      &kp F10     &kp F11
+&trans         &kp LALT    &kp LGUI    &trans      &mo 5       &kp ENTER     &mkp LCLK       &kp LA(BACKSPACE)  &trans      &kp RA(RIGHT_SHIFT)  &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
