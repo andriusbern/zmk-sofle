@@ -249,9 +249,9 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - {t: '$$mdi:transfer$$', type: trans}
   - sys-control
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:mouse-left-click-outline$$
