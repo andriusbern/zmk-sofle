@@ -469,6 +469,6 @@ combos:
 - p: [48, 49]
   k: {t: ;, s: ':'}
 - p: [28, 29, 30]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: $$mdi:keyboard-esc$$
 - p: [34, 35, 36]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: $$mdi:keyboard-esc$$
